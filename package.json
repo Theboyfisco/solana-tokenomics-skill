@@ -1,0 +1,17 @@
+{
+  "name": "solana-tokenomics-skill",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theboyfisco/solana-tokenomics-skill.git"
+  },
+  "scripts": {
+    "validate:supply": "node examples/validate-supply-model.mjs examples/supply-model.json",
+    "validate:skill": "node examples/validate-skill-structure.mjs",
+    "validate:evals": "node examples/validate-evals.mjs evals/cases.json",
+    "validate": "npm run validate:supply && npm run validate:skill && npm run validate:evals"
+  },
+  "license": "MIT"
+}

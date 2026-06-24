@@ -1,0 +1,316 @@
+{
+  "_comment": "Complete tokenomics model template — solana-tokenomics-skill example",
+  "_instructions": "Replace all PLACEHOLDER values. Amounts are in base token units (before decimals).",
+
+  "token": {
+    "name": "Example Protocol Token",
+    "symbol": "EPT",
+    "decimals": 6,
+    "standard": "SPL Token",
+    "total_supply": 1000000000,
+    "total_supply_formatted": "1,000,000,000",
+    "mint_address": "PLACEHOLDER_MINT_ADDRESS",
+    "tge_date": "2026-09-01T00:00:00Z",
+    "network": "mainnet-beta"
+  },
+
+  "allocations": [
+    {
+      "category": "Team",
+      "percentage": 18,
+      "tokens": 180000000,
+      "cliff_months": 12,
+      "vesting_months": 36,
+      "vesting_type": "linear",
+      "revocable": true,
+      "recipients": [
+        {
+          "label": "Co-founder A",
+          "wallet": "PLACEHOLDER_WALLET_A",
+          "tokens": 60000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        },
+        {
+          "label": "Co-founder B",
+          "wallet": "PLACEHOLDER_WALLET_B",
+          "tokens": 60000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        },
+        {
+          "label": "CTO",
+          "wallet": "PLACEHOLDER_WALLET_C",
+          "tokens": 40000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        },
+        {
+          "label": "Head of Growth",
+          "wallet": "PLACEHOLDER_WALLET_D",
+          "tokens": 20000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        }
+      ]
+    },
+    {
+      "category": "Seed Investors",
+      "percentage": 8,
+      "tokens": 80000000,
+      "cliff_months": 6,
+      "vesting_months": 24,
+      "vesting_type": "linear",
+      "revocable": false,
+      "seed_price_usd": 0.02,
+      "seed_raise_usd": 1600000,
+      "recipients": [
+        {
+          "label": "VC Fund A",
+          "wallet": "PLACEHOLDER_WALLET_VC_A",
+          "tokens": 50000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        },
+        {
+          "label": "Angel — Name",
+          "wallet": "PLACEHOLDER_WALLET_ANGEL",
+          "tokens": 30000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        }
+      ]
+    },
+    {
+      "category": "Strategic Round",
+      "percentage": 7,
+      "tokens": 70000000,
+      "cliff_months": 3,
+      "vesting_months": 18,
+      "vesting_type": "linear",
+      "revocable": false,
+      "strategic_price_usd": 0.03,
+      "strategic_raise_usd": 2100000,
+      "recipients": [
+        {
+          "label": "Strategic Partner 1",
+          "wallet": "PLACEHOLDER_WALLET_STRAT",
+          "tokens": 70000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        }
+      ]
+    },
+    {
+      "category": "Advisors",
+      "percentage": 3,
+      "tokens": 30000000,
+      "cliff_months": 6,
+      "vesting_months": 18,
+      "vesting_type": "linear",
+      "revocable": false,
+      "recipients": [
+        {
+          "label": "Advisor A",
+          "wallet": "PLACEHOLDER_ADVISOR_A",
+          "tokens": 15000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        },
+        {
+          "label": "Advisor B",
+          "wallet": "PLACEHOLDER_ADVISOR_B",
+          "tokens": 15000000,
+          "streamflow_stream_id": "PLACEHOLDER_STREAM_ID"
+        }
+      ]
+    },
+    {
+      "category": "Community & Ecosystem",
+      "percentage": 35,
+      "tokens": 350000000,
+      "cliff_months": 0,
+      "vesting_months": 48,
+      "vesting_type": "governed_stream",
+      "revocable": false,
+      "subcategories": {
+        "airdrops": {
+          "percentage_of_community": 15,
+          "tokens": 52500000,
+          "note": "Retroactive rewards at TGE"
+        },
+        "liquidity_mining": {
+          "percentage_of_community": 30,
+          "tokens": 105000000,
+          "note": "Streamed over 48 months via protocol incentives"
+        },
+        "grants_and_bounties": {
+          "percentage_of_community": 20,
+          "tokens": 70000000,
+          "note": "DAO-governed, milestone-based"
+        },
+        "hackathons_and_ecosystem": {
+          "percentage_of_community": 20,
+          "tokens": 70000000,
+          "note": "Ecosystem partnerships, integrations"
+        },
+        "reserve": {
+          "percentage_of_community": 15,
+          "tokens": 52500000,
+          "note": "Unallocated community reserve — DAO vote required to use"
+        }
+      },
+      "dao_wallet": "PLACEHOLDER_DAO_MULTISIG"
+    },
+    {
+      "category": "Treasury",
+      "percentage": 19,
+      "tokens": 190000000,
+      "cliff_months": 0,
+      "vesting_months": 0,
+      "vesting_type": "multisig_controlled",
+      "revocable": false,
+      "multisig_type": "Squads Protocol",
+      "multisig_address": "PLACEHOLDER_TREASURY_MULTISIG",
+      "squads_url": "https://app.squads.so/squads/PLACEHOLDER",
+      "required_signers": 3,
+      "total_signers": 5,
+      "purpose": [
+        "Protocol development and infrastructure",
+        "Security audits",
+        "Exchange listings",
+        "Emergency reserve",
+        "Legal and compliance"
+      ]
+    },
+    {
+      "category": "Initial Liquidity",
+      "percentage": 10,
+      "tokens": 100000000,
+      "cliff_months": 0,
+      "vesting_months": 0,
+      "vesting_type": "locked_lp",
+      "revocable": false,
+      "lp_details": {
+        "dex": "Meteora DLMM",
+        "pool_address": "PLACEHOLDER_POOL_ADDRESS",
+        "paired_asset": "USDC",
+        "initial_price_usd": 0.05,
+        "token_side_usd": 5000000,
+        "paired_side_usd": 5000000,
+        "total_lp_usd": 10000000,
+        "lp_lock_duration_months": 12,
+        "lp_lock_proof": "PLACEHOLDER_LOCK_URL",
+        "lp_lock_expiry": "2027-09-01T00:00:00Z"
+      }
+    }
+  ],
+
+  "summary": {
+    "total_supply": 1000000000,
+    "tge_circulating_supply": 135000000,
+    "tge_circulating_pct": 13.5,
+    "tge_price_usd": 0.05,
+    "tge_market_cap_usd": 6750000,
+    "fdv_at_tge_usd": 50000000,
+    "fdv_to_mc_ratio": 7.41,
+    "insider_allocation_pct": 36,
+    "_note_fdv_mc": "7.4x ratio — acceptable for seed stage. Ensure LP can absorb unlock events."
+  },
+
+  "supply_shock_calendar": [
+    {
+      "date": "2026-09-01",
+      "event": "TGE",
+      "tokens_entering_circulation": 135000000,
+      "pct_of_supply": 13.5,
+      "category": "multiple",
+      "note": "Airdrop recipients + LP deployment. LP tokens are illiquid (locked)."
+    },
+    {
+      "date": "2027-03-01",
+      "event": "Seed investor cliff ends — streaming begins",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_starts": 3333333,
+      "pct_monthly": 0.33,
+      "category": "investors",
+      "note": "~3.33M tokens/month for 24 months. Pre-announce 30 days early."
+    },
+    {
+      "date": "2027-06-01",
+      "event": "Strategic round cliff ends — streaming begins",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_starts": 3888888,
+      "pct_monthly": 0.39,
+      "category": "investors",
+      "note": "~3.89M tokens/month for 18 months."
+    },
+    {
+      "date": "2027-09-01",
+      "event": "Team cliff ends — streaming begins + LP lock expires",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_starts": 5000000,
+      "pct_monthly": 0.5,
+      "category": "team",
+      "note": "MAJOR event: team streaming begins AND LP lock expires. Increase LP 2 weeks prior."
+    },
+    {
+      "date": "2027-09-01",
+      "event": "Advisor cliff ends — streaming begins",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_starts": 1666666,
+      "pct_monthly": 0.17,
+      "category": "advisors"
+    },
+    {
+      "date": "2029-03-01",
+      "event": "Seed investors fully vested",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_ends": 3333333,
+      "category": "investors",
+      "note": "Streaming stops. 80M tokens fully distributed."
+    },
+    {
+      "date": "2029-09-01",
+      "event": "Team fully vested",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_ends": 5000000,
+      "category": "team",
+      "note": "180M team tokens fully distributed over 4 years."
+    },
+    {
+      "date": "2030-09-01",
+      "event": "Community emission completes",
+      "tokens_entering_circulation": 0,
+      "monthly_stream_ends": "varies",
+      "category": "community",
+      "note": "48-month community emission program concludes."
+    }
+  ],
+
+  "authority_status": {
+    "mint_authority": {
+      "status": "REVOKED",
+      "revocation_tx": "PLACEHOLDER_TX_HASH",
+      "revocation_date": "2026-09-01",
+      "note": "Fixed supply — no new tokens can be minted"
+    },
+    "freeze_authority": {
+      "status": "REVOKED",
+      "revocation_tx": "PLACEHOLDER_TX_HASH",
+      "revocation_date": "2026-09-01",
+      "note": "Holders can always transfer freely"
+    },
+    "update_authority": {
+      "status": "REVOKED",
+      "revocation_tx": "PLACEHOLDER_TX_HASH",
+      "revocation_date": "2026-09-01",
+      "note": "Metadata is final"
+    }
+  },
+
+  "security": {
+    "audit_firm": "PLACEHOLDER_AUDIT_FIRM",
+    "audit_date": "PLACEHOLDER_DATE",
+    "audit_report_url": "PLACEHOLDER_URL",
+    "bug_bounty_url": "PLACEHOLDER_URL",
+    "solsniffer_score": "PLACEHOLDER_SCORE",
+    "source_code_url": "PLACEHOLDER_GITHUB_URL"
+  },
+
+  "generated_by": "solana-tokenomics-skill",
+  "version": "1.0.0",
+  "schema_version": "2026-06"
+}

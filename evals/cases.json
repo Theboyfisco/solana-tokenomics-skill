@@ -1,0 +1,85 @@
+[
+  {
+    "id": "defi-seed-tokenomics-review",
+    "title": "Seed-stage DeFi tokenomics review",
+    "prompt": "We are a seed-stage Solana DeFi protocol planning a 1B supply token. Team wants 25%, investors want 20%, community gets 25%, treasury 20%, LP 10%. Review the model and propose a stronger allocation, vesting, and launch float.",
+    "expected_skill_files": [
+      "skill/SKILL.md",
+      "skill/design.md",
+      "skill/vesting.md",
+      "skill/launch.md"
+    ],
+    "expected_artifacts": [
+      "revised allocation table",
+      "TGE circulating supply calculation",
+      "vesting schedule by stakeholder",
+      "risk notes for investor/team allocation"
+    ]
+  },
+  {
+    "id": "token-2022-fee-decision",
+    "title": "Token-2022 transfer-fee decision",
+    "prompt": "Our token should collect a 1% fee on every transfer and route it to protocol revenue. Should we use SPL Token or Token-2022, and what must we test before launch?",
+    "expected_skill_files": [
+      "skill/SKILL.md",
+      "skill/token-standard.md",
+      "skill/launch.md"
+    ],
+    "expected_artifacts": [
+      "SPL vs Token-2022 recommendation",
+      "extension list",
+      "integration risk checklist",
+      "authority and disclosure plan"
+    ]
+  },
+  {
+    "id": "vesting-setup",
+    "title": "Team and investor vesting setup",
+    "prompt": "Set up vesting for 4 founders, 2 seed investors, and 3 advisors. We want a transparent setup for the launch report and no accidental mainnet execution while testing.",
+    "expected_skill_files": [
+      "skill/SKILL.md",
+      "skill/vesting.md",
+      "examples/vesting-schedule.ts",
+      "skill/launch.md"
+    ],
+    "expected_artifacts": [
+      "stakeholder vesting table",
+      "Streamflow dry-run instructions",
+      "placeholder safety checks",
+      "transparency report fields"
+    ]
+  },
+  {
+    "id": "new-token-liquidity-launch",
+    "title": "New token liquidity launch",
+    "prompt": "We are launching a new Solana token with unstable price discovery. Compare Meteora DLMM and Raydium CPMM, size the initial LP, and give us a launch-day sequence with lock proof.",
+    "expected_skill_files": [
+      "skill/SKILL.md",
+      "skill/liquidity.md",
+      "skill/launch.md",
+      "skill/design.md"
+    ],
+    "expected_artifacts": [
+      "DEX recommendation",
+      "LP sizing formula",
+      "lock strategy",
+      "launch sequence"
+    ]
+  },
+  {
+    "id": "custom-anchor-vesting",
+    "title": "Custom Anchor vesting program",
+    "prompt": "We do not want Streamflow. Build a custom Anchor vesting program with cliff, linear unlock, revocation, and a security checklist.",
+    "expected_skill_files": [
+      "skill/SKILL.md",
+      "skill/vesting.md",
+      "skill/anchor-vesting.md"
+    ],
+    "expected_artifacts": [
+      "Anchor account model",
+      "claim math",
+      "revocation logic",
+      "test checklist"
+    ]
+  }
+]
