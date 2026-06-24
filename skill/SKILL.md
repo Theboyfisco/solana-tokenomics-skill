@@ -48,7 +48,7 @@ triggers:
   - Path: `ext/solana-tokenomics/skill/SKILL.md`
   - Triggers: `tokenomics`, `vesting`, `token-2022`, `mint authority`, `liquidity pool`
 
-----
+---
 
 ## What This Skill Is For
 
