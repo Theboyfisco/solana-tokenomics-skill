@@ -42,6 +42,14 @@ triggers:
 
 ---
 
+## Active Skills
+
+- **Tokenomics**: Full token lifecycle design, vesting, and launch liquidity bootstrapping.
+  - Path: `ext/solana-tokenomics/skill/SKILL.md`
+  - Triggers: `tokenomics`, `vesting`, `token-2022`, `mint authority`, `liquidity pool`
+
+---
+
 ## What This Skill Is For
 
 Use this skill whenever a founder, engineer, or builder asks about:
